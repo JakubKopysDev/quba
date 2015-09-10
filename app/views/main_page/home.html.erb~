@@ -1,0 +1,8 @@
+<div class="top-bar">
+	<div id="logo"><%= link_to 'Quba', "/" %></div>
+	<div id="about"><%= link_to('About', '/main_page/about') %></div>
+	<div id="log_in"><%= link_to('Log in', '#')%></div>
+</div>
+<div class="content">
+	SOME CONTENT
+</div>

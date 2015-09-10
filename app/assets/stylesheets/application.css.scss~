@@ -1,0 +1,82 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or any plugin's vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any styles
+ * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
+ * file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+body {
+	background-color: #484848;
+	font-family: 'Lato', sans-serif;
+	margin: 0;
+	padding: 0;
+	}
+
+.container {
+	width: 1000px;
+	background-color: #303030;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 70px;
+	height: 9999px;
+}
+/* header */
+#topbar {
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+  margin: 0px;
+	height: 50px;
+	background-color: #282828;
+
+	.option {
+		float: left;
+
+		a:link, a:visited {
+			line-height: 45px;
+			position: relative;
+			top: -16px;
+			display: block;
+			width: 120px;
+			text-decoration: none;
+			color: white;
+			text-align: center;
+			height: 50px;
+		}
+	}
+
+	.option_logo {
+		float: left;
+		font-weight: bold;
+		font-size: 25px;
+		letter-spacing: 2px;
+		a:link, a:visited {
+			background-color: #009933;
+			line-height: 45px;
+			position: relative;
+			top: -16px;
+			display: block;
+			width: 120px;
+			text-decoration: none;
+			color: white;
+			text-align: center;
+			height: 50px;
+		}
+	}
+	
+	a:hover, a:active {
+		background-color: #009966!important;
+	}
+}
+.content {
+	clear: both;
+}

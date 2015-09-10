@@ -1,0 +1,7 @@
+<div id="topbar">
+	<ul>
+		<div class="option_logo"><%= link_to 'Quba', "/" %></div>
+		<div class="option"><%= link_to('Top List', '/main_page/about') %></div>
+		<div class="option"><%= link_to('Log in', '#')%></div>
+	</ul>
+</div>
