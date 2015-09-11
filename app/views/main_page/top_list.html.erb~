@@ -1,12 +1,11 @@
-<% provide(:title, "Home" )%>
+<% provide(:title, "Top List" )%>
 <!DOCTYPE html>
 <html>
 	<head>
 		<title><%= yield(:title) %> | Quba </title>
 	</head>
 	<body>
-		<div class="content">
-			SOME CONTENT
-		</div>
+		<h1>This is Quba's Top List</h1>
+		<p>To be defined</p>
 	</body>
 </html>

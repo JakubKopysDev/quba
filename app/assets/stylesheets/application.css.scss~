@@ -18,6 +18,7 @@ body {
 	font-family: 'Lato', sans-serif;
 	margin: 0;
 	padding: 0;
+	margin-bottom: 150px;
 	}
 
 .container {
@@ -58,7 +59,7 @@ body {
 		float: left;
 		font-weight: bold;
 		font-size: 25px;
-		letter-spacing: 2px;
+		letter-spacing: 1px;
 		a:link, a:visited {
 			background-color: #009933;
 			line-height: 45px;
