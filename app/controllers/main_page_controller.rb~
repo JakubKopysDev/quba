@@ -2,6 +2,6 @@ class MainPageController < ApplicationController
   def home
   end
 
-  def about
+  def top_list
   end
 end

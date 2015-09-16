@@ -1,8 +1,8 @@
-<div id="topbar">
+<header id="topbar">
 	<ul>
-		<div class="option_logo"><%= link_to 'Quba', "/" %></div>
-		<div class="option"><%= link_to('Top List', '/main_page/top_list') %></div>
-		<div class="option"><%= link_to('Random Picture', '#')%></div>
-		<div class="option"><%= link_to('Log in', '#')%></div>
+		<div class="option_logo"><%= link_to 'Quba', root_path %></div>
+		<div class="option"><%= link_to('Top List', top_list_path) %></div>
+		<div class="option"><%= link_to('Random', '#')%></div>
+		<div class="option"><%= link_to('Sing Up', log_in_path )%></div>
 	</ul>
-</div>
+</header>

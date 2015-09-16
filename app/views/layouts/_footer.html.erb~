@@ -1,0 +1,10 @@
+<div class="footer">
+	<small>
+		<div id="left">Quba - your daily dose of fun cats pictures.</div>
+		<div id="right">
+			<a href="https://www.facebook.com" target="_blank" 
+			style="font-weight: bold">Jakub Kopyś</a> &copy;
+		 all rights reserved
+		</div>
+	</small>
+</div>

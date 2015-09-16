@@ -13,6 +13,15 @@
  *= require_tree .
  *= require_self
  */
+
+@font-face {
+  font-family: 'fontello';
+  src: url('<%= asset_path("fontello.eot") %>');
+  src: url('<%= asset_path("fontello.eot#iefix") %>') format('embedded-opentype'),
+       url('<%= asset_path("fontello.woff") %>') format('woff'),
+       url('<%= asset_path("fontello.ttf") %>') format('truetype');
+}
+
 body {
 	background-color: #484848;
 	font-family: 'Lato', sans-serif;
@@ -27,7 +36,8 @@ body {
 	margin-left: auto;
 	margin-right: auto;
 	margin-top: 70px;
-	height: 9999px;
+	margin-bottom: 20px;
+	height: 1500px;
 }
 /* header */
 #topbar {
@@ -80,4 +90,36 @@ body {
 }
 .content {
 	clear: both;
+}
+
+/* footer */
+
+.footer {
+	border-top: 2px solid black;
+	padding: 10px 0 10px;
+	margin-bottom: 0px;
+	width: 1000px;
+	color: white;
+	margin-left: auto;
+	margin-right: auto;
+  bottom:0;
+  height:auto;   /* Height of the footer */
+	overflow: hidden;
+	
+	a:link, a:visited {
+		text-decoration: none;
+		color: #009933;
+	}
+	a:hover {
+		text-decoration: none;
+		color: #009966;
+	}
+	
+	#left {
+		float: left;
+	}
+
+	#right {
+		float: right
+	}
 }
