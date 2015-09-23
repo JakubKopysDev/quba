@@ -2,6 +2,14 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+#signup {
+		a, a:visited, a:hover {
+		color: green!important;
+	}
+	small {
+		padding-top: 1000px;
+	}
+}
 #show_user { 
 	color: #009933;
 	padding-bottom: 30px;
@@ -24,7 +32,6 @@
 	padding-bottom: 5px;
 	padding-left: 5px;
 	font-weight: bold;
-	width: 50%;
 	margin-left: 10px;
 	margin-right: 10px;
 }

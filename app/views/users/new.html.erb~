@@ -1,7 +1,7 @@
 <% provide(:title, "Sign Up" )%>
 <div id="signup">
 	<h1 style="text-align: center; font-size: 35px;">Sign up</h1>
-	<div class="row">
+	<div>
 		<div>
 			<%= form_for(@user) do |f| %>
 				<%= render 'shared/error_messages' %>				
@@ -11,7 +11,6 @@
 				<br><br>
 				<%= f.label :email %>
 				<%= f.email_field :email %>
-				<% if @user.errors.any? %>!<% end %>
 				<br><br>
 				<%= f.label :password %>
 				<%= f.password_field :password %>
@@ -21,6 +20,10 @@
 				<br><br>
 				<%= f.submit "Create my account", class: "submit" %>
 			<% end %>
+			<br><br>
 		</div>
 	</div>
 </div>
+				<small>
+				Do you have account already? <%= link_to "Log in there!", "#" %>
+			<small>
