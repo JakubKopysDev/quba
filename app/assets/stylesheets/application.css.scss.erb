@@ -37,7 +37,8 @@ body {
 	margin-right: auto;
 	margin-top: 70px;
 	margin-bottom: 20px;
-	height: 1500px;
+	height: auto;
+	padding: 20px 0;
 }
 /* header */
 #topbar {
@@ -90,6 +91,7 @@ body {
 }
 .content {
 	clear: both;
+	padding: 0 20px;
 }
 
 /* footer */
@@ -121,5 +123,64 @@ body {
 
 	#right {
 		float: right
+	}
+}
+
+
+/* forms */
+
+input, textarea, select, uneditable-input {
+	border: 1px solid #999;
+}
+
+label {
+	float: left;
+	text-align: right;
+	margin-right: 15px;
+	width: 100px;
+}
+
+#signup {
+	color: #008080;
+	margin: auto;
+	width: 50%
+	
+}
+/*.submit {
+	color: green;
+	font-weight: bold;
+	float: left;
+}*/
+input.submit {
+	width: 100%;
+	margin: auto;
+	background:#009933;
+	color:#fff;
+	height:30px;
+	border: 1px solid #282828;
+}
+
+input.submit:hover {
+	background: #006666;
+	color: white;
+}
+
+input {
+	width: 375px;
+}
+textarea:focus, input:focus {
+	border: 1px solid #0000CD;
+	background: #99CCCC;
+}
+
+#error_explanation {
+	padding: 5px;
+	margin-bottom: 10px;
+	background: AntiqueWhite;
+	color: red;
+	border: 2px solid red;
+
+	.alert {
+		font-weight: bold;
 	}
 }
