@@ -6,9 +6,6 @@
 		a, a:visited, a:hover {
 		color: green!important;
 	}
-	small {
-		padding-top: 1000px;
-	}
 }
 #show_user { 
 	color: #009933;
@@ -34,4 +31,16 @@
 	font-weight: bold;
 	margin-left: 10px;
 	margin-right: 10px;
+}
+
+.alert-danger {
+	text-align: center;
+	width: 50%;
+	padding-top: 5px;
+	padding-bottom: 5px;
+	margin: auto;
+	background: AntiqueWhite;
+	color: red;
+	font-weight: bold;
+	border: 1px solid red;
 }

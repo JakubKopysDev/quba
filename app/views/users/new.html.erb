@@ -19,8 +19,9 @@
 				<%= f.password_field :password_confirmation %>
 				<br><br>
 				<%= f.submit "Create my account", class: "submit" %>
+				<br>
 				<small>
-					Do you have account already? <%= link_to "Log in there!", "#" %>
+					Do you have account already? <%= link_to "Log in there!", login_path %>
 				<small>
 			<% end %>
 			<br><br>
