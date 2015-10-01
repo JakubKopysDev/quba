@@ -180,18 +180,26 @@ label {
 .dropdown {
 		float: left;
 		color: white;
+
 		ul {
-			-webkit-box-shadow: 0 0 5px rgba(0, 0, 0, 0.15);
-  		-moz-box-shadow: 0 0 5px rgba(0, 0, 0, 0.15);
-			list-style: none;
+
+		-webkit-box-shadow: 0 0 5px rgba(0, 0, 0, 0.15);
+		-moz-box-shadow: 0 0 5px rgba(0, 0, 0, 0.15);
+		list-style: none;
+
 			ul {
-			display: none;
+				display:block;
+	 		  opacity: 0;
+				-webkit-transition: opacity 0.5s;
+				-moz-transition: opacity 0.4s;
 			a {
-			background: #333333!important;
+				background: #333333!important;
 			}
 			}
 			li:hover > ul { 
-				display: block!important;
+				display: block;
+				opacity: 1;
+
 			}
 			ul li {
 				margin-left: -40px;
@@ -219,3 +227,5 @@ label {
  	 border-top: 2px solid #009966;
 	}
 }
+
+

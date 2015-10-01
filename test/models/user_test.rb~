@@ -70,7 +70,7 @@ class UserTest < ActiveSupport::TestCase
 		mixed_case_email = "FoO@Bar.CoM"
 		@user.email = mixed_case_email
 		@user.save
-		assert_equal mixed_case_email, @user.email
+		assert_equal mixed_case_email.downcase, @user.email
 	end
 
 end

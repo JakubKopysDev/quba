@@ -2,7 +2,7 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-input#session_remember_me {
+/*input#session_remember_me {
 	width: 10px!important;
 	margin-left: 275px;
 }
@@ -13,4 +13,20 @@ input#session_remember_me {
 		margin-right: -300px;
 		margin-top:-20px;
 	}
+}*/
+
+input#session_remember_me {
+	vertical-align: middle; display: inline-block;
+}
+
+#signup {
+	span {
+		display: inline-blockimportant;
+		padding: 0;
+		margin: 0;
+	}
+}
+
+label {
+	vertical-align: middle; display: inline-block;
 }

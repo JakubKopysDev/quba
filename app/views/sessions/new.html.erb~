@@ -6,10 +6,15 @@
 			<%= form_for(:session, url: login_path) do |f| %>				
 				
 				<%= f.label :email %>
-				<%= f.email_field :name %>
+				<%= f.email_field :email %>
 				<br><br>
 				<%= f.label :password %>
 				<%= f.password_field :password %>
+				<br><br>
+				<%= f.label :remember_me do %>
+					<%= f.check_box :remember_me %>
+					<span>Remember me on this computer</span>
+				<% end %>
 				<br><br>
 				<%= f.submit "Log in", class: "submit" %>
 				<br>
