@@ -1,15 +1,7 @@
 <header id="topbar">
 	<ul>
 		<div class="option_logo"><%= link_to 'Quba', root_path %></div>
-		<div class="option"><%= link_to('Top List', top_list_path) %></div>
-		<div class="option"><%= link_to('Random', '#')%></div>
-		<% if !logged_in? %>
-			<div class="option"><%= link_to('Log in', login_path )%></div>
-		<% end %>
 		<% if logged_in? %>
-			<div class="option">
-				<%= link_to('Add', '#')%>
-			</div>
 			<div class="dropdown">
 			<ul>
 				<li>
@@ -18,13 +10,27 @@
 						<li class="nav-item">
 							<%= link_to 'Profile', user_path(current_user) %>
 						</li>
-						<li class="nav-item"><%= link_to 'Settings', '#' %></li>
+						<li class="nav-item"><%= link_to 'Settings',
+																		 edit_user_path(current_user) %></li>
 						<li class="nav-item logout">
 							<%= link_to('Log out', logout_path, method: "delete" )%>
 						</li>
 					</ul>
 				</li>
 			<ul>
+			</div>
+			<div class="option">
+				<%= link_to('Users', users_path)%>
+			</div>
+		<% end %>
+		<div class="option"><%= link_to('Top List', top_list_path) %></div>
+		<div class="option"><%= link_to('Random', '#')%></div>
+		<% if !logged_in? %>
+			<div class="option"><%= link_to('Log In', login_path )%></div>
+		<% end %>
+		<% if logged_in? %>
+			<div class="option">
+				<%= link_to('Add', '#')%>
 			</div>
 		<% end %>
 	</ul>
