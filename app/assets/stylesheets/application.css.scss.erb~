@@ -229,6 +229,7 @@ label {
 .user_list {
 	img {
 		padding-top: 15px;
+		margin-right: 5px;
 	}
 
 	h1 {
@@ -241,7 +242,6 @@ label {
 		list-style: none;
 		li {
 			color: white;
-			overflow: auto;
 			margin-right: 40px;
 			padding: 10px 0;
 			border-bottom: 2px solid #333333;
