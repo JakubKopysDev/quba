@@ -227,13 +227,17 @@ label {
 
 /* User index */
 .user_list {
-	
+	img {
+		padding-top: 15px;
+	}
+
 	h1 {
 		margin-left: 50px;
 		color: #009966;
 		font-size: 35px;
 	}
 	.users {
+		line-height: 80px;
 		list-style: none;
 		li {
 			color: white;
@@ -295,7 +299,8 @@ label {
 	}
 }
 #del {
+	float: right;
 	a:hover {
-		color: red!important!;
+		color: red;
 	}
 }

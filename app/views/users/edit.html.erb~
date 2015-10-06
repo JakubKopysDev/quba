@@ -1,0 +1,27 @@
+<% provide(:title, "Edit user" )%>
+<div id="signup">
+	<h1 style="text-align: center; font-size: 35px;">Update your profile</h1>
+	<div>
+		<div>
+			<%= form_for(@user) do |f| %>
+				<%= render 'shared/error_messages' %>				
+				
+				<%= f.label :name %>
+				<%= f.text_field :name %>
+				<br><br>
+				<%= f.label :email %>
+				<%= f.email_field :email %>
+				<br><br>
+				<%= f.label :password %>
+				<%= f.password_field :password %>
+				<br><br>
+				<%= f.label :password_confirmation, "Confirmation" %>
+				<%= f.password_field :password_confirmation %>
+				<br><br>
+				<%= f.submit "Save changes", class: "submit" %>
+				<br>
+			<% end %>
+			<br><br>
+		</div>
+	</div>
+</div>
