@@ -1,7 +1,17 @@
 <% provide(:title, @user.name) %>
 <div id="show_user">
 	<h1>
-		<%= gravatar_for user %>
+		<%= gravatar_for @user %>
 		<span style="margin-left: 10px;"><%= @user.name %></span>
 	</h1>
+	<div class="show_posts">
+		<% if @user.posts.any? %>
+			<%= will_paginate @posts %>
+			<h3>Posts (<%= @user.posts.count %>)</h3>
+			<ol class="posts">
+				<%= render @posts %>
+			</ol>
+			<%= will_paginate @posts %>
+		<% end %>
+	</div>
 </div>

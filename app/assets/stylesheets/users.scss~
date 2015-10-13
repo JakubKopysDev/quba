@@ -41,6 +41,17 @@
 	margin: auto;
 	background: AntiqueWhite;
 	color: red;
-	font-weight: bold;
 	border: 1px solid red;
+}
+
+.gravataredit {
+	margin-bottom: 50px;
+	margin-left: -5px;
+	a {
+	 	color: red;
+	}
+}
+
+.pagination {
+	margin-right: 100px;
 }

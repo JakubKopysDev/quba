@@ -4,7 +4,7 @@
 	<div>
 		<div>
 			<%= form_for(@user) do |f| %>
-				<%= render 'shared/error_messages' %>				
+				<%= render 'shared/error_messages', object: f.object %>				
 				
 				<%= f.label :name %>
 				<%= f.text_field :name %>
@@ -17,11 +17,15 @@
 				<br><br>
 				<%= f.label :password_confirmation, "Confirmation" %>
 				<%= f.password_field :password_confirmation %>
+				<%= f.label :gravatar %>
+				<div class="gravataredit">
+      		<%= gravatar_for @user %>
+      		<a href="http://gravatar.com/emails" target="_blank">change</a>
+    		</div>
 				<br><br>
 				<%= f.submit "Save changes", class: "submit" %>
 				<br>
 			<% end %>
-			<br><br>
 		</div>
 	</div>
 </div>

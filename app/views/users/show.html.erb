@@ -4,4 +4,14 @@
 		<%= gravatar_for @user %>
 		<span style="margin-left: 10px;"><%= @user.name %></span>
 	</h1>
+	<div class="show_posts">
+		<% if @user.posts.any? %>
+			<h3>Posts (<%= @user.posts.count %>)</h3>
+			<%= will_paginate @posts %>
+			<ol class="posts">
+				<%= render @posts %>
+			</ol>
+			<%= will_paginate @posts %>
+		<% end %>
+	</div>
 </div>

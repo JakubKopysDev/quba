@@ -1,12 +1,6 @@
 <% provide(:title, "Home" )%>
-<!DOCTYPE html>
-<html>
-	<head>
-		<title><%= yield(:title) %> | Quba </title>
-	</head>
-	<body>
-		<div class="content">
-			SOME CONTENT
-		</div>
-	</body>
-</html>
+<div class="content">
+	<div class="show_posts">
+				<%= render 'shared/feed' %>
+	</div>
+</div>

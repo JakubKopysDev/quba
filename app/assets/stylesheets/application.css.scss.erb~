@@ -23,7 +23,7 @@
 }
 
 body {
-	background-color: #484848;
+	background-color: #25383C; /*484848*/
 	font-family: 'Lato', sans-serif;
 	margin: 0;
 	padding: 0;
@@ -31,7 +31,7 @@ body {
 
 .container {
 	width: 1000px;
-	background-color: #303030;
+	background-color: #303030; /*303030 121212*/
 	margin-left: auto;
 	margin-right: auto;
 	margin-top: 70px;
@@ -47,7 +47,7 @@ body {
 	right: 0;
   margin: 0px;
 	height: 50px;
-	background-color: #282828;
+	background-color: #121212; /*282828*/
 	.option {
 		float: left;
 		a:link, a:visited {
@@ -191,7 +191,7 @@ label {
 				-webkit-transition: opacity 0.4s;
 				-moz-transition: opacity 0.4s;
 			a {
-				background: #333333!important;
+				background: #121212!important;
 			}
 			}
 			li:hover > ul { 
@@ -204,7 +204,7 @@ label {
 		}
 
 		a:link, a:visited {
-			background: #282828;
+			background: #121212;
 			line-height: 45px;
 			position: relative;
 			margin-left: -40px;
@@ -243,7 +243,7 @@ label {
 		li {
 			color: white;
 			margin-right: 40px;
-			padding: 10px 0;
+			padding: 5px 0;
 			border-bottom: 2px solid #333333;
 		}
 		a {
@@ -274,8 +274,8 @@ label {
 		text-align: center;
 		line-height: 35px;
 		font-weight: bold;
-		border-top: 1px solid white;
-		border-bottom: 1px solid white;
+		border-top: 1px solid #009966;
+		border-bottom: 1px solid #009966;
 		color: white;
 		display: block;
 		width: 67px;
@@ -291,11 +291,11 @@ label {
 	}
 
 	.prev {
-	border-left: 1px solid white;
+	border-left: 1px solid #009966;
 	}
 
 	.next {
-		border-right: 1px solid white;
+		border-right: 1px solid #009966;
 	}
 }
 #del {
@@ -303,4 +303,89 @@ label {
 	a:hover {
 		color: red;
 	}
+}
+
+.show_posts {
+	ol {
+		list-style: none;
+		li {
+				margin-top: 10px;
+				border-bottom: 2px solid #333333;
+		}
+	}
+	a {
+		text-decoration: none;
+		color: #009966;
+		}
+}
+
+.post {
+	color: white;
+	margin-right: 50px;
+
+	.title {
+		font-size: 23px;
+		font-weight: bold;
+		text-decoration: underline;
+		text-decoration-style: double;
+		}
+	.user {
+		font-size: 14px;
+	}
+	.timestamp {
+		font-size: 14px;
+		}
+	.user, .title, .timestamp{
+		margin-left: 155px;
+	}
+}
+img {
+		padding-top: 5px;
+		display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#show_user {
+	h3 {
+		color: white;
+		margin-left: 100px;
+		margin-top: -20px;
+	}
+	.pagination {
+		margin-left: 310px;
+	}
+}
+
+#add {
+	h1 {
+		margin-top: 0px;
+		text-align: center;
+		color: #009966;
+		font-size: 35px;
+		border-bottom: 2px solid #333333;
+		margin-right: 80px;
+		margin-left: 80px;
+	}
+	label {
+		color: green;	
+		font-weight: bold;
+		font-size: 20px;
+	}
+	#post_title {
+		display: block;
+		margin-left: auto;
+		margin-right: auto;
+		width: 50%;
+		height: 27px;
+		font-size: 20px;
+	}
+
+	#post_avatar {
+		display: block;
+		margin-left: auto;
+		color: white;
+		margin-right: auto;
+	}
+
 }

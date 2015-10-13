@@ -77,4 +77,13 @@ class UserTest < ActiveSupport::TestCase
 		assert_not @user.authenticated?('')
 	end
 
+
+	test "associated posts should be destroyed" do
+		@user.save
+		@user.posts.create!(title: "Lorem ipsum", avatar: sample_file)
+		assert_difference 'Post.count', -1 do
+			@user.destroy
+		end
+	end
+
 end

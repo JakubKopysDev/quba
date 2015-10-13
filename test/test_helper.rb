@@ -25,6 +25,10 @@ class ActiveSupport::TestCase
 		end
 	end
 
+	def sample_file(filename = "sample_file.png")
+		File.new("test/fixtures/#{filename}")
+	end
+
 	private
 		
 		# Returns true insite an integration test.
