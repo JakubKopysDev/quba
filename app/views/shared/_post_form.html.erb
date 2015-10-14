@@ -1,0 +1,5 @@
+<%= form_for @post, :url => posts_path, :html => { :multipart => true } do |form| %>
+	<%= f.text_area :title, placeholder: "Compose new post..." %>
+  <%= f.submit "Post" %>
+	<%= form.file_field :avatar %>
+<% end %>

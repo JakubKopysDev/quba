@@ -276,7 +276,7 @@ label {
 		font-weight: bold;
 		border-top: 1px solid #009966;
 		border-bottom: 1px solid #009966;
-		color: white;
+		color: #009966;
 		display: block;
 		width: 67px;
 		height: 35px;
@@ -284,8 +284,8 @@ label {
 	a:hover, a:active {
 		color: #009966;
 		background: #333333;
-		border-top: 3px solid white;
-		border-bottom: 3px solid white;
+		border-top: 3px solid #009966;
+		border-bottom: 3px solid #009966;
 		height: 30px;
 		line-height: 32px;
 	}
@@ -306,6 +306,7 @@ label {
 }
 
 .show_posts {
+	margin-top: 50px;
 	ol {
 		list-style: none;
 		li {
@@ -388,4 +389,17 @@ img {
 		margin-right: auto;
 	}
 
+}
+.show_posts1 {
+	ol {
+		list-style: none;
+		li {
+				margin-top: 10px;
+				border-bottom: 2px solid #333333;
+		}
+	}
+	a {
+		text-decoration: none;
+		color: #009966;
+		}
 }

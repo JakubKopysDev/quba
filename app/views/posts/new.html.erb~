@@ -1,0 +1,14 @@
+<div id="add">
+	<%= form_for @post, :html => {:multipart => true} do |f|%>
+		<%= render 'shared/error_messages', object: f.object %>
+		<br>
+		<h1>Add a new post</h1>
+		<%= f.text_field :title, placeholder: "Title of the post..." %>
+		<br><br>
+		<span id="browse">
+		<%= f.file_field :avatar %>
+		</span>
+		<br><br>
+		<%= f.submit "Post" %>
+	<% end %>
+</div>

@@ -1,0 +1,15 @@
+<li class="post">
+	<span class="user"><%= link_to post.user.name, post.user %></span>
+	<br>
+	<span class="title"><%= post.title %></span>
+	<br>
+	<span class="ava"><%= image_tag post.avatar(:large) %></span>
+	<br>
+	<span class="timestamp">
+		Posted <%= time_ago_in_words(post.created_at) %> ago.
+		<% if current_user.admin? %>
+			<%= link_to "delete", post, method: :delete,
+																	data: { confirm: "You sure?" } %>
+		<% end %>
+	</span>
+</li>

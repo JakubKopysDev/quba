@@ -1,6 +1,5 @@
 <% provide(:title, "Home" )%>
-<div class="content">
-	<div class="show_posts">
+	<div class="show_posts1">
 				<%= render 'shared/feed' %>
 	</div>
-</div>
+

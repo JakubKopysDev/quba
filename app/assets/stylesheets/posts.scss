@@ -1,0 +1,33 @@
+input[type=submit] {
+	display: block;
+	margin: auto;
+	width: 200px;
+	font-weight: bold;
+	font-size: 17px;
+	background:#009933;
+	color:#fff;
+	height:30px;
+	border: 1px solid #282828;
+}
+
+input[type=submit]:hover {
+	background: #006666;
+	color: white;
+}
+
+input[type=file] {
+	background: #006666;
+	border: none;
+	font-size: 12px;
+}
+
+#error_explanation {
+	text-align: center;
+	width: 50%;
+	padding-top: 5px;
+	padding-bottom: 5px;
+	margin: auto;
+	background: AntiqueWhite;
+	color: red;
+	border: 1px solid red;
+}

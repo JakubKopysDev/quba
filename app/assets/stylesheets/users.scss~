@@ -52,6 +52,7 @@
 	}
 }
 
-.pagination {
-	margin-right: 100px;
+.show_posts {
+	margin-top: 50px;
 }
+
