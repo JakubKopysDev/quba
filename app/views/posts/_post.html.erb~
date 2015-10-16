@@ -7,9 +7,27 @@
 	<br>
 	<span class="timestamp">
 		Posted <%= time_ago_in_words(post.created_at) %> ago.
-		<% if current_user.admin? %>
+		<% if logged_in? && current_user.admin? %>
 			<%= link_to "delete", post, method: :delete,
 																	data: { confirm: "You sure?" } %>
 		<% end %>
+		<span class="likes">
+			<span class="like">
+			<% if logged_in? %>
+				<% if !current_user.likes?(current_user, post) %>
+					<%= link_to "Like", like_post_path(post, like: true), method: 'post', remote: true %>
+				</span>
+				<% else %>
+				<span class="unlike">
+					<%= link_to "Unlike", like_post_path(post, like: false), method: 'post', remote: true %>
+				</span>
+				<% end %>
+				(<%= pluralize( post.likes.size, "like") %>)
+			<% else %>
+				<%= link_to "Like", login_path,
+					  data: { confirm: "You need to log in to like" } %>
+				(<%= pluralize( post.likes.size, "like") %>)
+			<% end %>
+		</span>
 	</span>
 </li>

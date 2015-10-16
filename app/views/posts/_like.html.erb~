@@ -1,0 +1,1 @@
+<%= link_to "Like", like_post_path(@post, like: true), method: 'post', remote: true %>

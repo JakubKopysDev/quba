@@ -1,9 +1,9 @@
 <li class="post">
 	<span class="user"><%= link_to post.user.name, post.user %></span>
 	<br>
-	<span class="title"><%= post.title %></span>
+	<span class="title"><%= link_to post.title, post %></span>
 	<br>
-	<span class="ava"><%= image_tag post.avatar(:large) %></span>
+	<span class="ava"><%= link_to(image_tag(post.avatar(:large)), post) %></span>
 	<br>
 	<span class="timestamp">
 		Posted <%= time_ago_in_words(post.created_at) %> ago.
@@ -11,5 +11,27 @@
 			<%= link_to "delete", post, method: :delete,
 																	data: { confirm: "You sure?" } %>
 		<% end %>
+		<span class="likes">
+			<% if logged_in? %>
+				<% if !current_user.likes?(current_user, post) %>
+					<span class="like_<%= post.id %>">
+						<%= render 'posts/like', post: post %>
+						</span>
+				<% else %>
+					<span class="unlike_<%= post.id %>">
+						<%= render 'posts/unlike', post: post %>
+					</span>
+				<% end %>
+				<span id="likers">
+					<span id="likers_<%= post.id %>">
+						(<%= pluralize( post.likes.size, "like") %>)
+					</span>
+				</span>
+			<% else %>
+				<%= link_to "Like", login_path,
+					  data: { confirm: "You need to log in to like" } %>
+				(<%= pluralize( post.likes.size, "like") %>)
+			<% end %>
+		</span>
 	</span>
 </li>

@@ -390,7 +390,7 @@ img {
 	}
 
 }
-.show_posts1 {
+.show_posts_main {
 	ol {
 		list-style: none;
 		li {
@@ -402,4 +402,18 @@ img {
 		text-decoration: none;
 		color: #009966;
 		}
+}
+
+.likes {
+	float: right;
+	margin-right: 155px;
+}
+.like a{
+	color: green;
+	font-weight: bold;
+}
+
+.unlike a{
+	color: #A52A2A;
+	font-weight: bold;
 }

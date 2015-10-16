@@ -1,0 +1,5 @@
+<span class="like">
+  <span class="like_<%= post.id %>">
+    <%= link_to "Like", like_post_path(post, like: true), method: 'post', remote: true %>
+  </span>
+</span>

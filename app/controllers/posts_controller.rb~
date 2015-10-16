@@ -19,8 +19,30 @@ class PostsController < ApplicationController
 		post_destroy = Post.find(params[:id])
 		post_destroy.destroy
 		flash[:success] = "Post deleted"
-		redirect_to request.referer || root_url
+		redirect_to request.referrer || root_url
 	end
+
+	def like
+		post = Post.find(params[:id])
+		if Like.find_by(likeable: post)
+			Like.find_by(likeable: post).destroy
+		else
+			Like.create(likeable: post, user: current_user, like: params[:like])
+		end
+	end
+
+	#def like
+	#	post = Post.find(params[:id])
+	#	if Like.find_by(likeable: post)
+	#		Like.find_by(likeable: post).destroy
+	#		flash[:success] = "Post unliked!"
+	#		redirect_to :back
+	#	else
+	#		Like.create(likeable: post, user: current_user, like: params[:like])
+	#		flash[:success] = "Post liked!"
+	#		redirect_to :back
+	#	end
+	#end
 
 	private
 
