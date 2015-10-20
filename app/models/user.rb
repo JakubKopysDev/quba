@@ -1,6 +1,7 @@
 class User < ActiveRecord::Base
 	has_many :posts, dependent: :destroy
 	has_many :likes
+      has_many :comments
 	attr_accessor :remember_token
 	before_save { email.downcase! }
 	VALID_EMAIL_REGEX = /\A([\w+\-].?)+@[a-z\d\-]+(\.[a-z]+)*\.[a-z]+\z/i
@@ -22,7 +23,7 @@ class User < ActiveRecord::Base
 	def User.new_token
 		SecureRandom.urlsafe_base64
 	end
-	
+
 	# Remembers a user in the database for use in presistent sessions.
   def remember
     self.remember_token = User.new_token
@@ -39,7 +40,7 @@ class User < ActiveRecord::Base
 	def forget
 		update_attribute(:remember_digest, nil)
 	end
-	
+
 	# Returns true when the user likes post.
 	def likes?(current_user, post)
 		Like.find_by(likeable: post, user: current_user, like: true)

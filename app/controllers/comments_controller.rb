@@ -4,6 +4,7 @@ class CommentsController < ApplicationController
     @post = Post.find(params[:post_id])
     @comment = @post.comments.build(comment_params)
     if @comment.valid?
+      @comment.user = current_user
       @comment.save
       redirect_to @post
     else
@@ -15,6 +16,6 @@ class CommentsController < ApplicationController
   private
 
     def comment_params
-      params.require(:comment).permit(:body)
+      params.require(:comment).permit(:body, :user)
     end
 end
