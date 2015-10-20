@@ -1,3 +1,9 @@
 <% provide(:title, "Top List" )%>
-<h1>This is Quba's Top List</h1>
-<p>To be defined</p>
+<% if @feed_items.any? %>
+  <div class="show_posts_main">
+      <ol class="posts">
+        <%= render @feed_items %>
+      </ol>
+  </div>
+<% end %>
+

@@ -28,8 +28,9 @@ class PostsController < ApplicationController
 
 	def like
 		@post = Post.find(params[:id])
-		if Like.find_by(likeable: @post)
-			Like.find_by(likeable: @post).destroy
+		if @like = Like.find_by(likeable: @post, user: current_user)
+			#Like.find_by(likeable: @post, user: current_user, like: true).destroy
+			@like.destroy
 			respond_to do |format|
 				format.html {
 					flash[:success] = "Like Updated!"
@@ -38,7 +39,7 @@ class PostsController < ApplicationController
 				format.js
 				end
 		else
-			Like.create(likeable: @post, user: current_user, like: params[:like])
+			Like.create(likeable: @post, user: current_user, like: true)
 			respond_to do |format|
 				format.html {
 					flash[:success] = "Like Updated!"

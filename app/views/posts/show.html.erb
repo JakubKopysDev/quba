@@ -3,3 +3,17 @@
   <%= render @post %>
   </ol>
 </div>
+<h2>Comments</h2>
+<% if logged_in?  %>
+  <%= form_for [@post, Comment.new] do |f| %>
+          <p>
+                  <%= f.text_area :body %>
+          </p>
+          <p><%= f.submit "Add comment" %></p>
+  <% end %>
+<% else %>
+  <h3>You have to be logged in to comment - <%= link_to "Log in", login_path %></h3>
+<% end %>
+<div id="comments">
+  <%= render :partial => @post.comments %>
+</div>

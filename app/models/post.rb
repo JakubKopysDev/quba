@@ -1,8 +1,10 @@
 class Post < ActiveRecord::Base
-  belongs_to :user
-  has_many :likes, as: :likeable
+	belongs_to :user
+	has_many :likes, as: :likeable
+	has_many :comments
 	before_save { title.upcase! }
 	default_scope -> { order(created_at: :desc) }
+	scope :toplist, -> { order(likes_count: :desc)}
 	validates :user_id, presence: true
 	validates :avatar, attachment_presence: true
 	validates_attachment :avatar, content_Type: { content_type: ["image/jpeg",

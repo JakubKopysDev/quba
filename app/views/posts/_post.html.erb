@@ -11,6 +11,7 @@
 			<%= link_to "delete", post, method: :delete,
 																	data: { confirm: "You sure?" } %>
 		<% end %>
+		<%= link_to "Comments (#{post.comments.count})", post %>
 		<span class="likes">
 			<% if logged_in? %>
 				<% if !current_user.likes?(current_user, post) %>
