@@ -29,7 +29,6 @@ class PostsController < ApplicationController
 	def like
 		@post = Post.find(params[:id])
 		if @like = Like.find_by(likeable: @post, user: current_user)
-			#Like.find_by(likeable: @post, user: current_user, like: true).destroy
 			@like.destroy
 			respond_to do |format|
 				format.html {

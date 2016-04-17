@@ -14,16 +14,9 @@
  *= require_self
  */
 
-@font-face {
-  font-family: 'fontello';
-  src: url('<%= asset_path("fontello.eot") %>');
-  src: url('<%= asset_path("fontello.eot#iefix") %>') format('embedded-opentype'),
-       url('<%= asset_path("fontello.woff") %>') format('woff'),
-       url('<%= asset_path("fontello.ttf") %>') format('truetype');
-}
-
 body {
-	background-color: #25383C; /*484848*/
+	/*background: #25383C; 484848*/
+	background: url('/hehe.png');
 	font-family: 'Lato', sans-serif;
 	margin: 0;
 	padding: 0;
@@ -184,19 +177,18 @@ label {
 		-webkit-box-shadow: 0 0 5px rgba(0, 0, 0, 0.15);
 		-moz-box-shadow: 0 0 5px rgba(0, 0, 0, 0.15);
 		list-style: none;
-
 			ul {
-				display: block;
-	 		  opacity: 0;
+	 			opacity: 0;
 				-webkit-transition: opacity 0.4s;
 				-moz-transition: opacity 0.4s;
-			a {
-				background: #121212!important;
+				transition: opacity 0.4s;
+				a {
+					background: #121212!important;
+				}
 			}
-			}
-			li:hover > ul {
-				opacity: 1;
-				display: block;
+
+			li:hover ul {
+				opacity:1;
 			}
 			ul li {
 				margin-left: -40px;
@@ -205,16 +197,17 @@ label {
 
 		a:link, a:visited {
 			background: #121212;
-			line-height: 45px;
 			position: relative;
+			line-height: 45px;
 			margin-left: -40px;
 			top: -16px;
+			height: 50px;
 			display: block;
+			overflow: hidden;
 			width: 120px;
 			text-decoration: none;
 			color: white;
 			text-align: center;
-			height: 50px;
 		}
 
 }
